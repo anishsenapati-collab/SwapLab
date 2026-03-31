@@ -1,7 +1,7 @@
-# ES418 — Interest Rate Swap Valuation
-### Group 13 | Financial Modelling and Engineering
+# Interest Rate Swap Valuation
+###  Financial Modelling and Engineering
 
-A complete Python implementation of interest rate swap valuation using the **Vasicek stochastic interest rate model**, calibrated from real US Treasury bill data (FRED DTB3, 2006–2026).
+interest rate swap valuation using the **Vasicek stochastic interest rate model**, calibrated from real US Treasury bill data (FRED DTB3, 2006–2026).
 
 ---
 
