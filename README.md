@@ -18,54 +18,7 @@ interest rate swap valuation using the **Vasicek stochastic interest rate model*
 | DV01 | $371.38 per basis point |
 | Monte Carlo convergence error | 2.0% (2,000 paths) |
 
----
 
-## Project Structure
-
-```
-es418_group13/
-│
-├── DTB3.csv                   ← FRED data (download separately — see below)
-│
-├── data_loader.py             ← Phase 1a: load & clean rate data
-├── vasicek_simulator.py       ← Phase 1b: calibrate, simulate, validate
-├── phase2_bonds.py            ← Phase 2:  bond prices & yield curve
-├── phase3_swap.py             ← Phase 3:  swap cash flows & NPV
-├── phase4_sensitivity.py      ← Phase 4:  DV01, scenarios, sensitivity
-├── phase5_montecarlo.py       ← Phase 5:  Monte Carlo validation
-├── phase6_summary.py          ← Phase 6:  master runner (run this)
-
-```
-
----
-
-
-
-## Output Files
-
-Running `phase6_summary.py` produces the following files:
-
-| File | Description | Report Figure |
-|------|-------------|---------------|
-| `data_overview.png` | Rate history + Δr histogram | Figure 1 |
-| `vasicek_paths.png` | Simulated rate fan plot | Figure 2 |
-| `vasicek_validation.png` | Analytical vs simulated mean/var | Figure 3 |
-| `vasicek_terminal.png` | Terminal rate distribution | Figure 4 |
-| `yield_curve.png` | Bond prices, yields, forward rates | Figure 5 |
-| `yield_curve_shapes.png` | Normal / flat / inverted curves | Figure 6 |
-| `yield_sensitivity.png` | Parameter sensitivity analysis | Figure 7 |
-| `discount_factors.png` | Quarterly discount factors | Figure 8 |
-| `swap_cashflows.png` | Fixed vs floating cash flows | Figure 9 |
-| `swap_npv_vs_rate.png` | NPV as function of fixed rate K | Figure 10 |
-| `swap_sensitivity.png` | NPV sensitivity to all params | Figure 11 |
-| `swap_scenarios.png` | NPV under rate shift scenarios | Figure 12 |
-| `mc_npv_distribution.png` | Monte Carlo NPV histogram | Figure 13 |
-| `mc_convergence.png` | MC convergence to closed-form | Figure 14 |
-| `summary_results.txt` | All key numbers in one file | — |
-
-All figures are saved as both `.png` (150 dpi) and `.pdf` (vector, for the report).
-
----
 
 ## Theory Summary
 
